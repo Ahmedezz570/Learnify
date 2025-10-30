@@ -1,0 +1,80 @@
+export const allCourses = [
+  {
+    id: 1,
+    title: "Complete Web Development Bootcamp",
+    instructor: "Sarah Johnson",
+    price: 99.99,
+    rating: 4.8,
+    students: 12540,
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop",
+    category: "Web Development",
+    lessons: 45,
+    duration: "12 hours",
+    level: "Beginner"
+  },
+  {
+    id: 2,
+    title: "Python for Data Science",
+    instructor: "Dr. Michael Chen",
+    price: 79.99,
+    rating: 4.9,
+    students: 8930,
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=250&fit=crop",
+    category: "Data Science",
+    lessons: 38,
+    duration: "10 hours",
+    level: "Intermediate"
+  },
+  {
+    id: 3,
+    title: "UI/UX Design Masterclass",
+    instructor: "Emma Rodriguez",
+    price: 89.99,
+    rating: 4.7,
+    students: 6750,
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop",
+    category: "Design",
+    lessons: 32,
+    duration: "8 hours",
+    level: "Beginner"
+  },
+  {
+    id: 4,
+    title: "Advanced JavaScript & React",
+    instructor: "Alex Thompson",
+    price: 119.99,
+    rating: 4.9,
+    students: 15420,
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=250&fit=crop",
+    category: "Web Development",
+    lessons: 52,
+    duration: "15 hours",
+    level: "Advanced"
+  },
+  {
+    id: 5,
+    title: "Machine Learning Fundamentals",
+    instructor: "Dr. Lisa Wang",
+    price: 149.99,
+    rating: 4.8,
+    students: 9340,
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop",
+    category: "Data Science",
+    lessons: 64,
+    duration: "18 hours",
+    level: "Intermediate"
+  },
+  {
+    id: 6,
+    title: "Mobile App Development with Flutter",
+    instructor: "James Wilson",
+    price: 89.99,
+    rating: 4.6,
+    students: 7230,
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop",
+    category: "Mobile Development",
+    lessons: 41,
+    duration: "12 hours",
+    level: "Intermediate"
+  }
+];
