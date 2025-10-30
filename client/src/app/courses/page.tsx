@@ -64,7 +64,7 @@ const page = () => {
               </div>
               <div className="flex items-center justify-between mb-6">
           <p className="text-gray-600">
-            Showing {allCourses.length} courses 
+            Showing {allCourses.length} coursess 
           </p>
         </div>
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
