@@ -6,7 +6,7 @@ import { Play, Video, Clock, Award ,Star} from 'lucide-react'
 import  Link  from 'next/link'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-
+import CourseCard from '@/components/CourseCard'
 const page = () => {
   return (
     <div>
@@ -24,9 +24,9 @@ const page = () => {
             From web development to data science, start your learning journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" asChild className="px-8 py-6 text-lg">
+            <Button size="lg" asChild className="px-8 py-6 text-lg bg-gradient-to-r from-blue-600 to-purple-600">
               <Link href="/courses" className="flex items-center gap-2">
-                <Play className="h-5 w-5" />
+                <Play className="h-5 w-5 " />
                 Explore Courses
               </Link>
             </Button>
@@ -87,49 +87,7 @@ const page = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredCourses.map((course) => (
-              <Card key={course.id} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
-                <div className="relative overflow-hidden rounded-t-lg">
-                  <img 
-                    src={course.image} 
-                    alt={course.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <Badge className="absolute top-4 left-4">
-                    {course.category}
-                  </Badge>
-                </div>
-                <CardHeader>
-                  <CardTitle className="line-clamp-2 group-hover:text-primary transition-colors">
-                    {course.title}
-                  </CardTitle>
-                  <CardDescription>
-                    by {course.instructor}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-1">
-                      <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      <span className="font-medium">{course.rating}</span>
-                      <span className="text-gray-500">({course.students.toLocaleString()} students)</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
-                    <span>{course.lessons} lessons</span>
-                    <span>{course.duration}</span>
-                  </div>
-                </CardContent>
-                <CardFooter className="flex items-center justify-between">
-                  <div className="text-2xl font-bold text-primary">
-                    ${course.price}
-                  </div>
-                  <Button asChild>
-                    <Link href={`/course/${course.id}`}>
-                      Enroll Now
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
+               <CourseCard key={course.id} course={course} />
             ))}
           </div>
           
