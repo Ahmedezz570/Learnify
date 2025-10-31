@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from 'react'
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { BookOpen, LogOut, User, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger, } from "@/components/ui/dropdown-menu";
