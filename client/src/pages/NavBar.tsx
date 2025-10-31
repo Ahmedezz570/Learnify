@@ -6,12 +6,11 @@ import { BookOpen, LogOut, User, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger, } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, } from "@/components/ui/sheet";
+import { useAuth } from '@/context/AuthContext';
 export const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const currentUser = {
-    name: "John Doe",
-    role: "student",
-  };
+  const {user} = useAuth();
+  
   return (
     <header className=" backdrop-blur-md border-b border-border sticky top-0 z-50">
 
@@ -54,14 +53,14 @@ export const NavBar = () => {
               <DropdownMenuTrigger asChild>
                 <Button size="sm" className="flex items-center gap-2 transition-colors font-medium ">
                   <User className="h-4 w-4" />
-                  {currentUser.name}
+                  {user.name}
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-48">
                 <DropdownMenuLabel>
                   <div className="flex flex-col">
-                    <span>{currentUser.name}</span>
-                    <span className="text-xs text-muted-foreground capitalize">{currentUser.role}</span>
+                    <span>{user.name}</span>
+                    <span className="text-xs text-muted-foreground capitalize">{user.role}</span>
                   </div>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
@@ -125,8 +124,8 @@ export const NavBar = () => {
 
                 <div className="pt-4 border-t border-border space-y-4">
                   <div className="flex flex-col">
-                    <span className="font-medium">{currentUser.name}</span>
-                    <span className="text-sm text-muted-foreground capitalize">{currentUser.role}</span>
+                    <span className="font-medium">{user.name}</span>
+                    <span className="text-sm text-muted-foreground capitalize">{user.role}</span>
                   </div>
                   <Button
                     variant="destructive"
