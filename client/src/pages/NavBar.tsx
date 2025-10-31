@@ -53,14 +53,14 @@ export const NavBar = () => {
               <DropdownMenuTrigger asChild>
                 <Button size="sm" className="flex items-center gap-2 transition-colors font-medium ">
                   <User className="h-4 w-4" />
-                  {user.name}
+                  {user?.name}
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-48">
                 <DropdownMenuLabel>
                   <div className="flex flex-col">
-                    <span>{user.name}</span>
-                    <span className="text-xs text-muted-foreground capitalize">{user.role}</span>
+                    <span>{user?.name}</span>
+                    <span className="text-xs text-muted-foreground capitalize">{user?.role}</span>
                   </div>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
@@ -124,8 +124,8 @@ export const NavBar = () => {
 
                 <div className="pt-4 border-t border-border space-y-4">
                   <div className="flex flex-col">
-                    <span className="font-medium">{user.name}</span>
-                    <span className="text-sm text-muted-foreground capitalize">{user.role}</span>
+                    <span className="font-medium">{user?.name}</span>
+                    <span className="text-sm text-muted-foreground capitalize">{user?.role}</span>
                   </div>
                   <Button
                     variant="destructive"
