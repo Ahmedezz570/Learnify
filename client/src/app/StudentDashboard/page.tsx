@@ -108,13 +108,21 @@ const Page = () => {
                   {enrolledCourses.map((course) => (
                 <Card key={course.id} className="hover:shadow-lg transition-shadow bg-white/80 backdrop-blur-sm">
                   <div className="flex">
-                   <Image src={course.image} alt={course.title} width={300} height={180} className="object-cover rounded-l-lg"/>
+                  <Image
+  src={course.image}
+  alt={course.title}
+  width={180}
+  height={120}
+  className="object-cover rounded-l-lg"
+/>
+
                     <div className="flex-1 p-4">
                       <div className="flex items-start justify-between mb-2">
                         <div>
                           <h3 className="font-semibold line-clamp-1">{course.title}</h3>
-                          <p className="text-sm text-gray-600">{course.instructor}</p>
+                         
                         </div>
+                         
                         <Badge variant="secondary">{course.category}</Badge>
                       </div>
                       <div className="space-y-2">
@@ -126,27 +134,28 @@ const Page = () => {
                         <p className="text-xs text-gray-600">
                           {course.completedLessons} of {course.totalLessons} lessons completed
                         </p>
+                        <p className="text-sm text-gray-600">{course.instructor}</p>
                         <p className="text-xs text-gray-500">
                           Last watched: {course.lastWatched}
                         </p>
                       </div>
                       <Button size="sm" className="mt-3 w-full bg-linear-to-r from-indigo-500 via-sky-500 to-cyan-400">
                         <Play className="h-4 w-4 mr-2" />
-                        Continue Learning
+                        Continue 
                       </Button>
                     </div>
                   </div>
                 </Card>
               ))}
               </div>
-              <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-dashed border-2 border-blue-200">
+              <Card className="bg-linear-to-r from-blue-50 to-purple-50 border-dashed border-2 border-blue-200">
               <CardContent className="flex flex-col items-center justify-center py-8">
                 <BookOpen className="h-12 w-12 text-blue-400 mb-4" />
                 <h3 className="text-lg font-semibold mb-2">Discover More Courses</h3>
                 <p className="text-gray-600 text-center mb-4">
                   Expand your knowledge with thousands of courses from expert instructors
                 </p>
-                <Button asChild className='bg-gradient-to-r from-indigo-500 via-sky-500 to-cyan-400'>
+                <Button asChild className='bg-linear-to-r from-indigo-500 via-sky-500 to-cyan-400'>
                   <Link href="/courses">Browse Courses</Link>
                 </Button>
               </CardContent>
