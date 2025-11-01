@@ -22,8 +22,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 //   const [user, setUser] = useState<User | null>(null)
 const [user, setUser] = useState<User | null>({
   id: "0",
-  name: "Guest",
-  email: "guest@example.com",
+  name: "Ezz",
+  email: "Ezz@example.com",
   role: "student"
 })
 

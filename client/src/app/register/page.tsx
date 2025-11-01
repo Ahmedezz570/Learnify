@@ -161,7 +161,7 @@ const Register = () => {
                 </div>
               </div>
 
-              <Button type="submit" className="w-full" disabled={isLoading}>
+              <Button type="submit" className="w-full bg-linear-to-r from-indigo-500 via-sky-500 to-cyan-400" disabled={isLoading}>
                 {isLoading ? "Creating account..." : "Create account"}
               </Button>
             </form>
