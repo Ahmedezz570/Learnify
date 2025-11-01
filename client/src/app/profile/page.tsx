@@ -52,7 +52,7 @@ const Page = () => {
                 <Avatar className="h-24 w-24">
                   <AvatarImage src="" />
                   <AvatarFallback className="text-2xl bg-blue-400 text-primary-foreground">
-                    {getInitials(user.name)}
+                    {getInitials(user?.name || "")}
                   </AvatarFallback>
                 </Avatar>
                 <Button 
