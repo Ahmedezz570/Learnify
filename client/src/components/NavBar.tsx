@@ -30,7 +30,7 @@ export const NavBar = () => {
               Courses
             </Link>
             <Link
-              href="#"
+              href="/StudentDashboard"
               className="transition-colors font-medium text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-cyan-400"
             >
               Dashboard
