@@ -22,7 +22,7 @@ const enrolledCourses = [
     completedLessons: 29,
     lastWatched: "Introduction to React Hooks",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=180&fit=crop",
-    category: "Web Development"
+    category: "Web"
   },
   {
     id: 2,

@@ -36,7 +36,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center space-x-2 mb-4">
             <BookOpen className="h-8 w-8 text-primary" />
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-sky-500 to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-2xl font-bold bg-linear-to-r from-indigo-500 via-sky-500 to-cyan-400 bg-clip-text text-transparent">
                Learnify
             </h1>
           </Link>

@@ -11,7 +11,7 @@ import { useAuth } from '@/context/AuthContext';
 export const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { user } = useAuth();
-  const pathname = usePathname(); // ✅ المسار الحالي
+  const pathname = usePathname(); 
 
   return (
     <header className="backdrop-blur-md border-b border-border sticky top-0 z-50">
@@ -40,6 +40,13 @@ export const NavBar = () => {
                 ${pathname === "/StudentDashboard" ? "underline underline-offset-8 decoration-indigo-500" : ""}`}
             >
               Dashboard
+            </Link>
+            <Link
+              href="/teachers"
+              className={`transition-colors font-medium text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-sky-500 to-cyan-400 
+                ${pathname === "/teachers" ? "underline underline-offset-8 decoration-indigo-500" : ""}`}
+            >
+              Teachers
             </Link>
 
             <Button size="sm" asChild>
@@ -109,6 +116,13 @@ export const NavBar = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Dashboard
+                </Link>
+                <Link
+                  href="/teachers"
+                  className={`text-lg font-medium ${pathname === "/teachers" ? "underline underline-offset-8 decoration-indigo-500" : ""}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Teachers
                 </Link>
 
                 <Link
